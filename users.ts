@@ -6,7 +6,7 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
   return (await response.json()).data as UserData[];
 });
 
-interface UserData {
+export interface UserData {
   id: number
   email: string
   first_name: string
