@@ -51,7 +51,9 @@ const Users = () => {
 
   return (
     <View>
+      <View style={styles.reloadbutton}>
       <Button title={'Reload'} onPress={() => {dispatch(fetchUsers())} } />
+      </View>
       {users.map((user) => {
         return (
           <View style={styles.container} key={user.id}>
@@ -100,9 +102,14 @@ const styles = StyleSheet.create({
     marginTop : 40
   },
   datacontainer : {
-
+    alignItems : "center"
   },
   container : {
-
+    borderWidth : 2,
+    borderRadius : 10,
+    margin : 10
+  },
+  reloadbutton : {
+    alignItems : "center"
   }
 });
